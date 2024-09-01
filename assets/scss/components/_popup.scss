@@ -1,0 +1,44 @@
+@use '../abstract' as a;
+
+.popup {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: absolute;
+  padding: 1.5rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--clr-primary-color-very-dark-grayish-blue);
+
+  @include a.breakpoint(medium) {
+    border-radius: 0.5rem;
+    padding: 1rem 2.25rem;
+
+    // This is the arrow
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 0.75rem;
+      border-style: solid;
+      border-color: var(--clr-primary-color-very-dark-grayish-blue) transparent transparent transparent;
+    }
+
+  }
+
+  &__header {
+    font-size: 0.80rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--clr-primary-color-desaturated-dark-blue);
+  }
+
+  &__social-icon {
+    width: 1.25rem;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

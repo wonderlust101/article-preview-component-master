@@ -2,5 +2,27 @@
 
 h1, h2, h3, h4,
 h5, h6, p {
+  font-family: 'Manrope', sans-serif;
+}
 
+h2 {
+  font-size: 1.05rem;
+  color: var(--clr-primary-color-very-dark-grayish-blue);
+
+  @include a.breakpoint(medium){
+    font-size: 1.25rem;
+  }
+}
+
+h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--clr-primary-color-very-dark-grayish-blue);
+}
+
+p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--clr-primary-color-desaturated-dark-blue);
 }

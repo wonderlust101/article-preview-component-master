@@ -7,40 +7,53 @@
     <!--     <meta name="title" content="title"> -->
     <!--     <meta name="description" content="description"> -->
 
-    <title>Document</title>
-    <!--         <link rel="icon" href="assets/images/favicon.png" /> -->
+    <title>Frontend Mentor | Article preview component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
     <link rel="stylesheet" href="assets/css/main.css"/>
-
-    <!--Remove later-->
-    <style>
-        @font-face {
-            font-family: 'VT323';
-            src: url('assets/fonts/DotGothic16-Regular.ttf');
-        }
-
-        * {
-            font-family: 'VT323', sans-serif;
-            font-size: 120px;
-        }
-    </style>
-    <!--Remove later-->
 </head>
 <body>
-    <div style="display: grid; height: 100vh;">
-        <div style="width: 100%; background-color:var(--clr-primary-color-star-dust); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-election-night)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-crackled); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-fading-horizon)">Neon Genesis Evangelion</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-neon-spring); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-iris-royale)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-iris-royale); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-neon-spring)">Neon Genesis Evangelion</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-fading-horizon); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-crackled)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-election-night);display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-star-dust)">Neon Genesis Evangelion</h1></div>
-    </div>
+    <main class="card">
+        <img class="card__image" src="assets/images/drawers.jpg" alt="Drawer decorated with several items">
+        <section class="card__content">
+            <div class="card__text-content">
+                <h2>Shift the overall look and feel by adding these wonderful
+                    touches to furniture in your home</h2>
+
+                <p>Ever been in a room and felt like something was missing? Perhaps
+                    it felt slightly bare and uninviting. I’ve got some simple tips
+                    to help you make any room feel complete.</p>
+            </div>
+
+            <div class="card__author">
+                <img class="card__author-image" src="assets/images/avatar-michelle.jpg" alt="Profile shot of Michelle Appleton">
+                <div class="card__author-info">
+                    <h3>Michelle Appleton</h3>
+                    <p>28 Jun 2020</p>
+                </div>
+
+                <button id="shareButton" class="button button--light card__share-button" aria-label="Share">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                        <path fill="#currentcolor"
+                              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="sharePopup" class="popup card__popup popup--hidden">
+                <h2 class="popup__header">Share</h2>
+                <a href="https://www.facebook.com">
+                    <img class="popup__social-icon" src="assets/images/icon-facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com">
+                    <img class="popup__social-icon" src="assets/images/icon-twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://www.pinterest.com">
+                    <img class="popup__social-icon" src="assets/images/icon-pinterest.svg" alt="Pinterest">
+                </a>
+            </div>
+        </section>
+    </main>
 
     <script src="assets/scripts/index.js"></script>
 </body>

@@ -1,0 +1,81 @@
+@use '../abstract' as a;
+
+.card {
+  display: grid;
+  @include a.set-grid-areas(image, content);
+  gap: 0.75rem;
+  background-color: var(--clr-white);
+  width: min(45rem, 90%);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 25px var(--clr-box-shadow);
+
+  @include a.breakpoint(medium) {
+    width: min(55rem, 90%);
+    grid-template: 'image content';
+    grid-template-columns: 1fr 1.25fr;
+  }
+
+  &__content {
+    display: grid;
+    gap: 2.25rem;
+    padding: 1.25rem 2rem;
+    position: relative;
+
+    @include a.breakpoint(medium) {
+      padding: 2rem 2rem;
+    }
+  }
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+
+    @include a.breakpoint(medium) {
+      border-radius: 1rem 0 0 1rem;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-self: flex-end;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  &__author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  &__author-image {
+    width: 2.5rem;
+    border-radius: 50rem;
+  }
+
+  &__share-button {
+    margin-left: auto;
+    z-index: 1;
+  }
+
+  &__popup {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+
+    @include a.breakpoint(medium){
+      width: max-content;
+      height: max-content;
+      right: -5.1rem;
+      bottom: 6rem;
+    }
+  }
+}
